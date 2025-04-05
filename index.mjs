@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import { graphqlHTTP } from "express-graphql";
 import dotenv from "dotenv";
-import schema from "./graphql/schema.mjs";
+import schema from "./schema.mjs";
 
 dotenv.config();
 
@@ -11,7 +11,7 @@ const app = express();
 // CORS configuration
 app.use(
   cors({
-    origin: "http://yourfrontend.com", // Set appropriate frontend URL
+    origin: "*", // Set appropriate frontend URL
     methods: ["GET", "POST"],
   })
 );
